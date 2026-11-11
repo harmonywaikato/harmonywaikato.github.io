@@ -326,13 +326,16 @@
     margin-top: .5em;
     margin-bottom: .4em;
   }
+  .quartet-dialog h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+  }
 
-  /* TODO: investigate if this is needed and if it breaks HarmonySite */
-  /*
-  * {
+  .cards * {
     box-sizing: border-box;
   }
-  */
 </style>
 <!-- Custom CSS: Chorus and quartet cards, quartet dialogs. -->
 <style type="text/css">/*
@@ -425,7 +428,7 @@
   dialog {
     border: none;
     outline: none;
-    width: calc(var(--body-width) - 2 * var(--body-margin)); /* (The web browser sets max-width to a reasonable default. Likewise max-height.) */
+    width: calc(1200px - 2 * 16px); /* (The web browser sets max-width to a reasonable default. Likewise max-height.) */
     border-radius: 24px;
   }
 
