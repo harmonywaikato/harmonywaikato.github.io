@@ -2568,7 +2568,7 @@ html[xmlns] .flexslider .slides{
 }
 #layerslider-wrapper .ls-shadow-top{
     position:absolute;
-    background-image:url(https://www.mightyriverharmony.org.nz/brostools/applications/singing/themes/Mercury/images/shadow-top.png);
+    background-image:url(../images/shadow-top.png);
     background-repeat:no-repeat;
     background-position:top center;
     height:42px;
@@ -2578,7 +2578,7 @@ html[xmlns] .flexslider .slides{
 }
 #layerslider-wrapper .ls-shadow-bottom{
     position:absolute;
-    background-image:url(https://www.mightyriverharmony.org.nz/brostools/applications/singing/themes/Mercury/images/shadow-bottom.png);
+    background-image:url(../images/shadow-bottom.png);
     background-repeat:no-repeat;
     background-position:bottom center;
     height:32px;
