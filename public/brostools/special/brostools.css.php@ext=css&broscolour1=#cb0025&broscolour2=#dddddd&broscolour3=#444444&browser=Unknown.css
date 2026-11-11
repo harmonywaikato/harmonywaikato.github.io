@@ -601,7 +601,7 @@ tr.greenbold td
 	display:			inline-block;
 	color:				#555;
 	background-color:	#fff2a8;
-	background-image:	url(/brostools/images/info.gif);
+	background-image:	url(../images/info.gif);
 	background-repeat:	no-repeat;
 	background-position:5px 3px;
 	border:				1px solid orange;
@@ -615,7 +615,7 @@ tr.greenbold td
 	display:			inline-block;
 	color:				#555;
 	background-color:	#fff2a8;
-	background-image:	url(/brostools/images/info.gif);
+	background-image:	url(../images/info.gif);
 	background-repeat:	no-repeat;
 	background-position:5px 3px;
 	border:				1px solid orange;
@@ -631,7 +631,7 @@ tr.greenbold td
 	display:			inline-block;
 	color:				#555;
 	background-color:	#ffc4c4;
-	background-image:	url(/brostools/images/exclamation.gif);
+	background-image:	url(../images/exclamation.gif);
 	background-repeat:	no-repeat;
 	background-position:5px 3px;
 	border:				1px solid red;
@@ -673,7 +673,7 @@ tr.greenbold td
     cursor:				hand;
     cursor:				pointer;
 	float:				right;
-	background:			url(/brostools/images/close-button.png) no-repeat;
+	background:			url(../images/close-button.png) no-repeat;
 	width:				17px;
 	height:				16px;
 }
@@ -793,7 +793,7 @@ tr.greenbold td
 }
 .neatbox_header
 {
-	background:			url('/brostools/images/neatbox_header.gif') top center repeat-x #525252;
+	background:			url('../images/neatbox_header.gif') top center repeat-x #525252;
 	color:				white;
 	padding:			6px 14px;
 	font-weight:		bold;
@@ -801,7 +801,7 @@ tr.greenbold td
 }
 .neatbox_body
 {
-	background:			url('/brostools/images/neatbox_body.gif') top center repeat-x #fff;
+	background:			url('../images/neatbox_body.gif') top center repeat-x #fff;
 	border:				1px solid #ccc;
 	padding:			14px;
 	line-height: 		1em;
@@ -814,7 +814,7 @@ tr.greenbold td
  */
 .cssbox, .cssbox_wide, .cssbox_body, .cssbox_head, .cssbox_head .head_content, .cssbox_head .head_no_content
 {
-	background: transparent url(/brostools/images/rounded.gif) no-repeat bottom right;
+	background: transparent url(../images/rounded.gif) no-repeat bottom right;
 }
 .cssbox
 {
@@ -876,7 +876,7 @@ tr.greenbold td
 }
 .admintable_top
 {
-	background:			url('/brostools/images/neatbox_header.gif') top center repeat-x #525252;
+	background:			url('../images/neatbox_header.gif') top center repeat-x #525252;
 	color:				white;
 	padding:			6px 14px;
 	font-weight:		bold;
@@ -885,7 +885,7 @@ tr.greenbold td
 }
 .admintable_bottom
 {
-	background:			url('/brostools/images/neatbox_body.gif') top center repeat-x #fff;
+	background:			url('../images/neatbox_body.gif') top center repeat-x #fff;
 	padding:			12px 10px 0px 10px;
 	min-height:			28px;
 }
@@ -1027,7 +1027,7 @@ div.jqt_tooltip
 	left:		0;
 	height:		100%;
 	width:		100%;
-	background-image:		url('/brostools/images/pleasewait.gif');
+	background-image:		url('../images/pleasewait.gif');
 	background-color:		white;
 	background-repeat:		no-repeat;
 	background-position:	50% 50%;
@@ -1372,7 +1372,7 @@ html.touchevents .multiselect-selected-list > .uix-list-container
 .ui-widget-header .ui-icon,
 .ui-dialog-titlebar .ui-button:not(:hover):not(:active) .ui-icon
 {
-	background-image: url("/brostools/jquery/jqueryui/css/images/ui-icons_ffffff_256x240.png") !important;
+	background-image: url("../jquery/jqueryui/css/images/ui-icons_ffffff_256x240.png") !important;
 }
 .ui-widget-content
 {
@@ -1417,17 +1417,17 @@ html.touchevents .multiselect-selected-list > .uix-list-container
 }
 .ui-icon
 {
-	background-image: url(/brostools/jquery/jqueryui/css/images/ui-icons_ef8c08_256x240.png) !important;
+	background-image: url(../jquery/jqueryui/css/images/ui-icons_ef8c08_256x240.png) !important;
 }
 .appendGrid button[id^="evprog_Delete_"]
 {
-	background-image: url(/brostools/jquery/jqueryui/css/images/ui-icons_ef8c08_256x240.png) !important;
+	background-image: url(../jquery/jqueryui/css/images/ui-icons_ef8c08_256x240.png) !important;
 	background-position: -175px -96px !important;
 	padding: 0 !important;
 }
 .ui-icon-carat-2-n-s
 {
-	background-image: url(/brostools/jquery/jqueryui/css/images/ui-icons_ef8c08_256x240.png) !important;
+	background-image: url(../jquery/jqueryui/css/images/ui-icons_ef8c08_256x240.png) !important;
 	background-position: -128px 0px !important;
 }
 .appendGrid .append
@@ -1437,7 +1437,7 @@ html.touchevents .multiselect-selected-list > .uix-list-container
 }
 .appendGrid .append::before
 {
-	background-image: url(/brostools/jquery/jqueryui/css/images/ui-icons_ef8c08_256x240.png);
+	background-image: url(../jquery/jqueryui/css/images/ui-icons_ef8c08_256x240.png);
 	background-position: -16px -128px;
 	content: "";
 	display: inline-block;
@@ -1588,7 +1588,7 @@ table.dataTable.hover > tbody > tr.selected:hover > *, table.dataTable.display >
 /* Multiselect */
 .uix-multiselect .uix-control-right
 {
-	background-image: url(/brostools/jquery/jqueryui/css/images/ui-icons_ef8c08_256x240.png) !important;
+	background-image: url(../jquery/jqueryui/css/images/ui-icons_ef8c08_256x240.png) !important;
 	background-position: -208px -48px !important;
 	padding: 0 !important;
 }
