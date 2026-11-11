@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /db_uploads/
-
-User-agent: *
-Disallow: /commonfiles/
