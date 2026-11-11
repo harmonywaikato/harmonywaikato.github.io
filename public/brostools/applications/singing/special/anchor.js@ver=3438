@@ -1,0 +1,91 @@
+/*
+ *	This script does the following:
+ *		- Converts anchor links href="#foo" to the proper URL href="https://www.site.org/dbpage...#foo"
+ *		- Listens for the "click" event on these links, then corrects the scroll position.
+ *	Why use requestAnimationFrame()?
+ *		1) setTimeout() is less reliable.
+ *		2) Listening for 'hashchange' on window won't trigger if you click the same section twice in a row.
+ *
+ *	Also aded:  Code for improving "Visually impaired" mode
+ */
+document.addEventListener('DOMContentLoaded', function ()
+{
+	const pageURLWithoutHash	= window.location.href.replace(/#[^#]*$/, '')
+	const html					= document.querySelector('html')
+	const pageLinks				= document.querySelectorAll('a[href^="#"]:not([href^="#tab-"])')
+	const header				= document.querySelector('header')
+	const themeIsStockholm		= Boolean(document.querySelector('head link[rel="stylesheet"][href*="themes/Stockholm"]'))
+	const themeIsMercury		= Boolean(document.querySelector('head link[rel="stylesheet"][href*="themes/Mercury"]'))
+
+	for (const pageLink of pageLinks)
+	{
+		// This ignores tab links, e.g. on https://www.barbershop.org.au/Contact
+		if (pageLink.parentElement.parentElement.classList.contains('tabList'))
+			continue
+
+		pageLink.href = pageLink.href.replace(window.location.origin + '/', pageURLWithoutHash)
+		pageLink.addEventListener('click', function ()
+		{
+			const originalScrollTop = html.scrollTop
+
+			function tryUpdateScroll()
+			{
+				const scrollTop = html.scrollTop
+
+				if (scrollTop === originalScrollTop)
+				{
+					window.requestAnimationFrame(tryUpdateScroll)
+				}
+				else
+				{
+					const stockholmHeaderIsSticky = themeIsStockholm && window.matchMedia('(min-width: 1001px)').matches
+					const mercuryHeaderIsSticky = themeIsMercury && window.matchMedia('(min-width: 641px)').matches
+
+					if (stockholmHeaderIsSticky || mercuryHeaderIsSticky)
+					{
+						html.scrollTop -= header.getBoundingClientRect().height
+					}
+					html.scrollTop -= 15
+				}
+			}
+
+			tryUpdateScroll()
+		})
+	}
+})
+
+/* Accessibility improvements */
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.insertAdjacentHTML('beforeend', `
+        <span id="search-announcement" aria-live="assertive" class="ui-helper-hidden-accessible"></span>
+    `)
+    const searchAnnouncement = document.getElementById('search-announcement')
+    const searchBox = document.getElementById('_searchq')
+    searchBox.addEventListener('keydown', (ev) => {
+        if (ev.key === 'ArrowDown' || ev.key === 'ArrowUp') {
+            const focusedResult = document.querySelector('#ui-id-1 .ui-state-focus')
+            if (!focusedResult) return
+            focusedResult.innerHTML = focusedResult.innerHTML.replace(/<br>/g, '<br>\n')
+            searchAnnouncement.textContent = focusedResult.textContent.replace(/\n/g, ', ')
+        }
+    })
+})
+
+$(document).ready(() => {
+  let previousFocus
+  jQuery('body').on('dialogopen', (ev) => {
+    previousFocus = document.activeElement
+    ev.target.parentElement.focus()
+  })
+  jQuery('body').on('dialogclose', (ev) => {
+    if (window.location.href.includes('dbpage.php?pg=newmemwiz')) {
+      const selectedStep = document.querySelector('.selectedstep')
+      selectedStep.setAttribute('tabindex', '-1')
+      selectedStep.focus()
+    } else {
+      previousFocus.focus()
+    }
+    previousFocus = null
+  })
+})

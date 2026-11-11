@@ -1,0 +1,6 @@
+function customError()
+{
+	return true;
+}
+
+window.onerror=customError;

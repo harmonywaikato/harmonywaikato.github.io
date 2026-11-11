@@ -1,0 +1,206 @@
+/* Mercury tweaks */
+/* Version: 2023-06-02 */
+
+/*****************************************************************************/
+/***************************** CHANGE FONT SIZE ******************************/
+/*****************************************************************************/
+
+/* To change the font size, set "font-size: 17px" on the <html> element. */
+/* Everything here will inherit from that. */
+
+/* rem has very good browser support. */
+/* (Better than CSS variables.) */
+body
+{
+  /* !important is needed to override multidatespicker.css on "Create Repeating Events". */
+  /* I don't want to set !important for td, th, input, etc. because I guess it'll break cases
+     where a PARTICULAR input needs to have a different font size e.g. "#foobarinput { font-size: 1.5em }". */
+  font-size: 1rem !important;
+}
+td, th, input, textarea, select, option, caption, legend
+{
+  font-size: 1rem;
+}
+h3
+{
+  font-size: 1.25rem;
+}
+
+/* Top bar */
+.fusion-secondary-header
+{
+  font-size: 0.87em;
+}
+
+/* Member search dropdown */
+ul.ui-autocomplete li
+{
+  font-size: 0.8em;
+}
+
+/* Navigation bar */
+.fusion-main-menu > ul > li > a
+{
+  font-size: 1.05em;
+}
+.fusion-main-menu .sub-menu
+{
+  width: 14em;
+}
+.fusion-main-menu .sub-menu li a
+{
+  font-size: 1em;
+  line-height: 1.4;
+  padding: 12px 20px;
+}
+
+/* Sidebar search input */
+.gsc-input
+{
+  font-size: inherit !important;
+}
+
+/* Footer */
+.quick_links,
+.footer_contact_item
+{
+  font-size: inherit;
+}
+
+/* admintables/datatables */
+.admintable_top
+{
+  font-size: inherit;
+}
+
+/* Tabs */
+.tabs a
+{
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+/* broshelp */
+.broshelp > .fa-question-circle
+{
+  margin-left: 0.6em;
+}
+
+/* bros_imgview */
+.bros_imgview_outer
+{
+  height: auto !important;
+}
+.bros_imgview_header
+{
+  height: 3em !important;
+}
+.bros_imgview_footer
+{
+  height: 1.5em !important;
+}
+
+/* Event Calendar */
+.fc-time, .fc-title
+{
+  font-size: 0.9rem;
+}
+
+/* Members Only */
+/* This just fixes a problem with the Mercury theme. */
+/* This font size does NOT respond to changes. */
+.memlink_wrapper h2
+{
+  font-size: 26px;
+}
+
+/* Configuration */
+.indentmenu
+{
+  font-size: 0.8em;
+}
+
+/* Riser stacks */
+#mainbody #profile
+{
+  height: auto;
+}
+
+/* Create repeating events */
+#multidatepicker_n1 > .ui-datepicker
+{
+  width: fit-content !important;
+}
+
+/*****************************************************************************/
+/******************************* OTHER TWEAKS ********************************/
+/*****************************************************************************/
+
+/* Add padding to the top bar. */
+/* Otherwise, on systems with "floating" scrollbars, the configuration icon
+   may be covered by the scrollbar, making it difficult to click. */
+.fusion-secondary-header
+{
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Add padding to the navigation bar. */
+@media (min-width: 1025px)
+{
+  .fusion-main-menu > ul > li:last-child
+  {
+    padding-right: 20px;
+  }
+}
+
+/* Stop the Members menu from going off the edge of the screen. */
+.fusion-main-menu > ul > li:last-child > .sub-menu
+{
+  right: 0;
+  left: auto;
+}
+
+/* Correctly centre the title bar. */
+.fusion-page-title-bar
+{
+  box-sizing: border-box;
+}
+
+/* Make quote boxes in the home page slideshow smaller on mobile. */
+@media (max-width: 400px) {
+  .banner_quote_box {
+    max-width: 100vw !important;
+    min-width: 100px !important;
+  }
+}
+@media (max-width: 700px) {
+  .slide-content .fusion-title-sc-wrapper
+  {
+    padding: 3px 8px !important;
+  }
+  .slide-content .fusion-title
+  {
+    margin: 0 !important;
+  }
+  .slide-content .fusion-title > h2
+  {
+    padding: 0 !important;
+  }
+  .banner_quote_box
+  {
+    font-size: 1rem !important;
+  }
+}
+
+/* Fix the "Latest News" page. */
+/* (The "Add new" button wasn't working, as reported in #13465.) */
+#hspage_news .add_button_float_right ~ .fusion-fullwidth
+{
+  margin-top: 35px !important;
+}
+#hspage_news .add_button_float_right ~ .fusion-fullwidth ~ .fusion-fullwidth
+{
+  margin-top: 0 !important;
+}
