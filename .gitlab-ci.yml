@@ -1,8 +1,0 @@
-pages:
-  image: busybox
-  script: ":"
-  artifacts:
-    paths:
-    - public
-  only:
-  - gitlab-pages
