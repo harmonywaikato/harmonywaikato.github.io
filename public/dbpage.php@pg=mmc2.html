@@ -287,7 +287,43 @@
 						<div class="post-content">
 							<div class="fusion-fullwidth fullwidth-box fusion-builder-row-1 nonhundred-percent-fullwidth non-hundred-percent-height-scrolling"  style='background-color: rgba(255,255,255,0);padding-top:0px;padding-right:30px;padding-bottom:2%;padding-left:30px;margin-top: 1%;'>
 								<div class="fusion-builder-row fusion-row ">
-									Hello world
+									
+		<script>
+
+		$(document).ready(function()
+		{
+			let slideIndex0 = 0;
+			showSlides0();
+
+			function showSlides0()
+			{
+				let slides = $(".simple_slides0");
+				slides.each(function(index, slide)
+				{
+					$(slide).css("display", "none");
+				});
+				slideIndex0++;
+				if (slideIndex0 > slides.length)
+					slideIndex0 = 1;
+				$(slides[slideIndex0 - 1]).css("display", "block");
+
+				setTimeout(showSlides0, 6000);
+			}
+		});
+
+		</script>
+		 <div class="slideshow-container" id="slideshow-container0" style="max-width: 1280px; height: 675px;">
+			<div class="simple_slides0 slide_fade">
+				<img width="1536" src="photos/IMG_7164.jpeg"   style="border-width: 0px; border-style: solid;" alt="IMG 7164" title="IMG 7164" loading="lazy" />
+			</div>
+			  
+			<div class="simple_slides0 slide_fade">
+				<img width="2048" src="photos/IMG_7165.jpeg"   style="border-width: 0px; border-style: solid;" alt="IMG 7165" title="IMG 7165" loading="lazy" />
+			</div>
+			  </div>
+
+Hello world
+
 								</div>
 							</div>
 						</div>
